@@ -1,12 +1,17 @@
 // Library Imports
 const express = require("express");
 const bodyParser = require("body-parser");
+const fs = require("fs-extra");
 
 // Project Imports
 const routes = require("./routes.js");
 
 const PORT = process.env.PORT || 5000;
 const app = express();
+
+if (!fs.existsSync("zip")) {
+  fs.mkdirSync("zip");
+}
 
 app.use(bodyParser.json());
 
@@ -15,6 +20,7 @@ app.use("/api", routes);
 
 // Set static folder
 app.use(express.static("client"));
+app.use("/zip", express.static(__dirname + "/zip"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));

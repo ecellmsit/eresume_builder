@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin:0%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.underline{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7vh;
+    flex-direction: column;
+}
+
+.underline div{
+    height: 3px;
+    width: 15%;
+    margin-top: 5px;
+    background: darkorange;
+}
+
+.skills{
+    position: relative;
+    background-color: black;
+    padding :3% 2% 7%;
+}
+
+ #skill_div{
+    background-color: black;
+    position: relative;
+    width:100%;
+    padding :5% 2% 12%;
+    text-align: center;
+}
+
+.circlechart{
+    color:white;
+}
+
+.card{
+        background-color: black;
+        height:100%;
+        width:100%;
+      
+}
+ .heading{
+    margin: 2vh 0 0 0;
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+    color:white;
+    padding-top:3%;
+    
+} 
+
+ .skill_text{
+    position: relative;
+    color:#fff;
+    font-size:1.5em;
+    margin: 10%;
+}
+
+.experience{
+    background-image:url(../images/pexels-hasan-albari-1229861\ .jpg); 
+    background-attachment:fixed;
+    z-index:1;
+    position: relative;
+}
+.exp_section{
+    display:block;
+      opacity:0.9;
+      padding :2% 8% 5%;
+        position: relative;
+        z-index:0;  
+}   
+
+dl{
+    text-align:left ;
+    justify-content: center;
+    color:white;
+}
+
+dt{
+    margin-left:1%;
+    font-size:1.8em;
+}
+
+dd{
+    font-size:1em ;
+}
+
+.icon{
+    opacity:0.9;
+    font-size:1em;
+}
+
+.contact{
+    background:url(../images/bg-pic.jpg);
+    background-size: cover;
+}
+
+.subheading{
+    
+    font-size:1.2em ;
+    color:white;
+    letter-spacing: 2px;
+}
+
+.fab{
+    font-size:2em;
+    color:white;
+    cursor: pointer;
+}
+
+.social a {
+    margin: 2% 2% 2% 2%;
+}
+
+
+.social{
+    float: center;
+    display: flex;
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fab:hover{
+    color: #1AA9E3;
+}
+
+.icon2{
+    font-size:1.8em;
+    color:white;
+     margin-bottom:5%; 
+    margin-left:36%;
+}
+
+.far{
+    font-size:1.8em;
+    color:white;
+    margin-bottom:5%;
+    margin-left:13%;
+}
+
+.title{
+    font: size 0.5em;
+    font-family:arial ;
+    display:inline;
+    margin-left:5%;
+    letter-spacing: 2px;
+}
+
+.info{
+    display: flex;
+}
+
+footer {
+    padding: 1vh;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer h3 {
+    font-size:1.5em;
+    letter-spacing:1px;
+}
+@media screen and (max-width: 768px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    i {
+        margin: 0;
+    }
+}
+
+.skill{
+    width: 25rem;
+    height: 4rem;
+    color: black;
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 100px/50px;
+    padding: 1rem;
+    margin-left: 5%;
+    margin-bottom: 15%;
+ 
+}
+
+#talkbubble {
+    width: 125px;
+    height: 60px;
+    background: white;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+  #talkbubble:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 17px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid white;
+    border-bottom: 13px solid transparent;
+}
+
+  .skills-container{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left:15%;
+}
+  .skill:after{
+    display: table;
+}
+  .column{
+    float: left;
+    width: 33.33%;
+    height: 100%;
+}

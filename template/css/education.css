@@ -1,0 +1,103 @@
+.education{
+    margin-top: 3vh;
+    padding: 5vh 10vw;
+    text-align: center;
+}
+
+.education h1 {
+    margin: 2vh 0 0 0;
+    font-size: 2.3rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.education-list{
+    text-align: left;
+    line-height: 4vh;
+}
+
+.education-list div {
+    padding: 3vh 0;
+}
+
+.period{
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.timeline{
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.timeline::after{
+	content: "";
+	position: absolute;
+	width: 5px;
+	background: #232323;
+	top: 0;
+	bottom: 0;
+	left: 5vw;
+	margin-left: 0;
+}
+
+.container{
+	margin: 0 5vw;
+	padding: 1vh 5vw;
+	position: relative;
+	background: #e4e3e3;
+}
+
+.container:last-child{
+	  padding-bottom: 4vh;
+}
+
+.container::after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -14px;
+    background-color: white;
+    border: 4px solid #005086;
+    top: calc(3vh + 14px);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left{
+	left: 0;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: calc(3vh + 22px);
+    width: 0;
+    z-index: 1;
+    left: calc(5vw - 10px);
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.content {
+	margin-top: 3vh;
+    padding: 3vh 3.5vw;
+    background-color: white;
+	position: relative;
+	text-align: left;
+    border-radius: 6px;
+}
+
+.content p, .content h2 {
+	line-height: 1.7;
+}
+
+.sticky{
+    position: relative;
+}
