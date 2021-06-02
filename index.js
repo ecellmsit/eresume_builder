@@ -20,11 +20,10 @@ app.use(bodyParser.json());
 app.use("/api", routes);
 
 // Set static folder
-app.use(express.static("client"));
 app.use("/zip", express.static(__dirname + "/zip"));
 
 app.get("*", (req, res) => {
-  res.sendFile(__dirname + "/client/index.html");
+  res.sendFile(__dirname + "/form/index.html");
 });
 
 app.listen(PORT, () => {
