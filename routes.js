@@ -4,6 +4,7 @@ const fs = require("fs-extra");
 const multer = require("multer");
 const homeGenerator = require("./home_generator");
 const { zip } = require("zip-a-folder");
+const mv = require("mv");
 
 const TIMEOUT = 1000 * 60 * 5; // 5 minutes
 
@@ -27,7 +28,7 @@ router.get("/getstarted", upload.single("profilePhoto"), (req, res) => {
   var file = __dirname + "/images/" + hash;
 
   // Save the image by renaming & respond with the hash.
-  fs.rename(req.file.path, file, function (err) {
+  mv(req.file.path, file, function (err) {
     if (err) {
       console.log(err);
       res.status(500).send("Unable to upload the file.");
@@ -76,7 +77,7 @@ router.get("/downloaderesume", express.json(), (req, res) => {
       console.log("success!");
       try {
         // Move the image from images directory to eresume directory.
-        fs.rename(
+        mv(
           `images/${token}`,
           __dirname + "/" + token + "/images/logo.jpg",
           function (err) {

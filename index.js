@@ -24,7 +24,7 @@ app.use(express.static("client"));
 app.use("/zip", express.static(__dirname + "/zip"));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "client", "index.html"));
 });
 
 app.listen(PORT, () => {
