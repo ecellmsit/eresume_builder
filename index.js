@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 app.use("/api", routes);
 
 // Set static folder
+app.use(express.static(__dirname + "/form"));
 app.use("/zip", express.static(__dirname + "/zip"));
 
 app.get("*", (req, res) => {

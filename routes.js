@@ -13,7 +13,7 @@ const router = express.Router();
 
 router.get("/", (request, response) => response.send("Hello World!"));
 
-router.get("/getstarted", upload.single("profilePhoto"), (req, res) => {
+router.post("/getstarted", upload.single("profilePhoto"), (req, res) => {
   // Creates images directory if not existed.
   if (!fs.existsSync("images")) {
     fs.mkdirSync("images");

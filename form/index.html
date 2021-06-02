@@ -1,174 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-</head>
-<body>
-    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <div class="main-container">
-        
-        <form class="form">
-            <h2>Welcome To E-Resume</h2>
-            <div class="img-container" data-text="Upload your">
-          <label for="image" style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Choose Your Image here: </label>
-          <input name="file" type="file" class="file-upload-field" value="">
-        </div>
-        <div class="start-btn">
-        <input id="start" type="submit" value="Get Started">
-       </div>
-        </form>
 
-        <div id="form-2-container" class="form" style="display: none;">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name..">
-       
-        <label for="bio">Bio</label>
-            <textarea type="text" id="bio" name="bio" placeholder="Write something about yourself.." style="height: 140px;"></textarea>
-       
-        <div class="education-container">
-            <label for="education">Education</label>
-            <div class="education">
-                <input type="text" class="education-1" name="name" placeholder="Name of Institution..">
-                <div class="date">
-                    <label for="start-date" id="date-ip">Start date </label>
-                    <input type="date"  min="1-1-1998" max="12-12-2023">  
-                    <label for="start-date" id="date-ip">End date </label>
-                    <input type="date"  min="1-1-1998" max="12-12-2023">    
-            </div>
-            </div>
-             </div>
-             <div class="education-container">
-                <label for="education">Education</label>
-                <div class="education">
-                    <input type="text" class="education-1" name="name" placeholder="Name of Institution..">
-                    <div class="date">
-                        <label for="start-date" id="date-ip">Start date </label>
-                        <input type="date"  min="1-1-1998" max="12-12-2023">  
-                        <label for="start-date" id="date-ip">End date </label>
-                        <input type="date"  min="1-1-1998" max="12-12-2023">    
-                </div>
-                </div>
-                </div>
-            <div class="skills">
-                <div class="heading">
-                <label for="skills">Skills 
-                <i class="far fa-plus-square skills-plus"></i>
-            </label>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <div class="main-container">
+
+    <form class="form">
+      <h2>Welcome To E-Resume</h2>
+      <div class="img-container" data-text="Upload your">
+        <label for="image"
+          style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Choose
+          Your Image here: </label>
+        <input name="profilePhoto" type="file" class="file-upload-field" value="">
+      </div>
+      <div class="start-btn">
+        <input id="start" type="submit" value="Get Started">
+      </div>
+    </form>
+
+    <div id="form-2-container" class="form" style="display: none;">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+
+      <label for="bio">Bio</label>
+      <input type="text" id="bio" name="bio" placeholder="Write something about yourself..">
+
+      <div class="education-container">
+        <label for="education">Education</label>
+        <div class="education">
+          <input type="text" class="education-1" name="name" placeholder="Name of Institution..">
+          <div class="date">
+            <label for="start-date" id="date-ip">Start date </label>
+            <input type="date" min="1-1-1998" max="12-12-2023">
+            <label for="start-date" id="date-ip">End date </label>
+            <input type="date" min="1-1-1998" max="12-12-2023">
+          </div>
+        </div>
+      </div>
+      <div class="education-container">
+        <label for="education">Education</label>
+        <div class="education">
+          <input type="text" class="education-1" name="name" placeholder="Name of Institution..">
+          <div class="date">
+            <label for="start-date" id="date-ip">Start date </label>
+            <input type="date" min="1-1-1998" max="12-12-2023">
+            <label for="start-date" id="date-ip">End date </label>
+            <input type="date" min="1-1-1998" max="12-12-2023">
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="heading">
+          <label for="skills">Skills
+            <i class="far fa-plus-square skills-plus"></i>
+          </label>
         </div>
         <div class="all-skills"></div>
+      </div>
+
+      <div class="experiences">
+        <div class="heading">
+          <label for="experience">Experiences
+            <i class="far fa-plus-square skills-plus exp-plus"></i>
+          </label>
+        </div>
+        <div class="exp-container">
+          <div class="experience">
+            <input type="text" class="education-1" name="name" placeholder="Heading..">
+            <div class="exp-date">
+              <label for="start-date" id="date-ip">Start date </label>
+              <input type="date" min="1-1-1998" max="12-12-2023">
+              <label for="start-date" id="date-ip">End date </label>
+              <input type="date" min="1-1-1998" max="12-12-2023">
             </div>
-
-          <div class="experiences">
-            <div class="heading">
-                <label for="experience">Experiences
-                <i class="far fa-plus-square skills-plus exp-plus"></i>
-            </label>
+            <textarea type="text" id="describe" name="describe" placeholder="Tell something about your experience.."
+              style="height: 140px;"></textarea>
+          </div>
         </div>
-          <div class="exp-container">
-              <div class="experience">
-                <input type="text" class="education-1" name="name" placeholder="Heading..">
-                <div class="exp-date">
-                    <label for="start-date" id="date-ip">Start date </label>
-                    <input type="date"  min="1-1-1998" max="12-12-2023">  
-                    <label for="start-date" id="date-ip">End date </label>
-                    <input type="date"  min="1-1-1998" max="12-12-2023"> 
-                </div> 
-              <textarea type="text" id="describe" name="describe" placeholder="Tell something about your experience.." style="height: 140px;"></textarea>
-              </div>
-          </div>
-          </div>
+      </div>
 
-          <div class="achievements">
-            <div class="heading">
-                <label for="achievements">Achievements
-            </label>
+      <div class="achievements">
+        <div class="heading">
+          <label for="achievements">Achievements
+          </label>
         </div>
-           <div class="achieve-container">
-               <div class="achievement">
-                <input type="text" class="achievement-1" name="name" placeholder="Name..">   
-                <div class="exp-date">
-                <label for="start-date" id="date-ip">Date </label>
-                <input type="date"  min="1-1-1998" max="12-12-2023">
-                </div> 
-                <textarea type="text" id="achieve" name="achieve" placeholder="Describe the achievement.." style="height: 140px;"></textarea> 
-               </div>
-
-               <div class="achievement">
-                <input type="text" class="achievement-1" name="name" placeholder="Name..">   
-                <div class="exp-date">
-                <label for="start-date" id="date-ip">Date </label>
-                <input type="date"  min="1-1-1998" max="12-12-2023">
-                </div> 
-                <textarea type="text" id="achieve" name="achieve" placeholder="Describe the achievement.." style="height: 140px;"></textarea> 
-               </div>
-
-               <div class="achievement">
-                <input type="text" class="achievement-1" name="name" placeholder="Name..">   
-                <div class="exp-date">
-                <label for="start-date" id="date-ip">Date </label>
-                <input type="date"  min="1-1-1998" max="12-12-2023">
-                </div> 
-                <textarea type="text" id="achieve" name="achieve" placeholder="Describe the achievement.." style="height: 140px;"></textarea> 
-               </div>
-           </div>
+        <div class="achieve-container">
+          <div class="achievement">
+            <input type="text" class="achievement-1" name="name" placeholder="Name..">
+            <div class="exp-date">
+              <label for="start-date" id="date-ip">Date </label>
+              <input type="date" min="1-1-1998" max="12-12-2023">
+            </div>
+            <textarea type="text" id="achieve" name="achieve" placeholder="Describe the achievement.."
+              style="height: 140px;"></textarea>
           </div>
-          <div class="contact">
-            <label for="contact">Contact Details
-              <div class="socials">
-                <label for="socials">Socials:
 
-                  <div class="linkedin">
-                    <input type="text" class="social" name="name" placeholder="Linkedin Id..">
-                  </div>
-                  <div class="twitter">
-                    <input type="text" class="social" name="name" placeholder="Twitter username..">
-                  </div>
-                  <div class="github">
-                    <input type="text" class="social" name="name" placeholder="Github username..">
-                  </div>
+          <div class="achievement">
+            <input type="text" class="achievement-1" name="name" placeholder="Name..">
+            <div class="exp-date">
+              <label for="start-date" id="date-ip">Date </label>
+              <input type="date" min="1-1-1998" max="12-12-2023">
+            </div>
+            <textarea type="text" id="achieve" name="achieve" placeholder="Describe the achievement.."
+              style="height: 140px;"></textarea>
+          </div>
+
+          <div class="achievement">
+            <input type="text" class="achievement-1" name="name" placeholder="Name..">
+            <div class="exp-date">
+              <label for="start-date" id="date-ip">Date </label>
+              <input type="date" min="1-1-1998" max="12-12-2023">
+            </div>
+            <textarea type="text" id="achieve" name="achieve" placeholder="Describe the achievement.."
+              style="height: 140px;"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="contact">
+        <label for="contact">Contact Details
+          <div class="socials">
+            <label for="socials">Socials:
+
+              <div class="linkedin">
+                <input type="text" class="social linkedin" name="linkedin" placeholder="Linkedin Id..">
               </div>
-              <div class="personal">
-                <label for="socials">Personal Details:
-                  <div class="email">
-                    <input type="text" class="details" name="name" placeholder="Your Email Id..">   
-                  </div>
-                  <div class="phone">
-                    <input type="text" class="details" name="name" placeholder="Your mobile number..">
-                  </div>
+              <div class="twitter">
+                <input type="text" class="social twitter" name="twitter" placeholder="Twitter username..">
+              </div>
+              <div class="github">
+                <input type="text" class="social github" name="github" placeholder="Github username..">
               </div>
           </div>
-          <input id="start" class="submit-btn" type="submit" value="Submit">
-        <div>
-    </div>
+          <div class="personal">
+            <label for="socials">Personal Details:
+              <div class="email">
+                <input type="text" class="details" name="email" placeholder="Your Email Id..">
+              </div>
+              <div class="phone">
+                <input type="text" class="details" name="phone" placeholder="Your mobile number..">
+              </div>
+          </div>
+      </div>
+      <input id="start" class="submit-btn" type="submit" value="Download Eresume">
+      <div>
+      </div>
 
-    <script>
-      $("#start").on("click",function(e){
-         $("form").hide();
-         $("#form-2-container").show();
-         e.preventDefault();
-        });
-       
-  
-    let addSkill=document.querySelector(".skills-plus");
-    addSkill.addEventListener("click",function(){
-    let skill=document.createElement("div");
-     skill.classList.add(".skill");
-     skill.innerHTML=`<div class="skill">
+      <script>
+        var token = '';
+        $('form')
+          .submit(function (e) {
+            $.ajax({
+              url: 'api/getstarted',
+              type: 'POST',
+              data: new FormData(this),
+              processData: false,
+              contentType: false,
+              success: function (data) {
+                if (data['status'] != 200) alert(data['message']);
+                token = data['hash'];
+                $("form").hide();
+                $("#form-2-container").show();
+              },
+              error: function (err) {
+                alert(err);
+              }
+            });
+            e.preventDefault();
+          });
+
+        let addSkill = document.querySelector(".skills-plus");
+        addSkill.addEventListener("click", function () {
+          let skill = document.createElement("div");
+          skill.classList.add(".skill");
+          skill.innerHTML = `<div class="skill">
                 <input type="text" class="skill-name" name="skill-name" placeholder="Your skill..">   
               </div>`;
-   document.querySelector(".all-skills").appendChild(skill);
-});
-   
-    let addExp=document.querySelector(".exp-plus");
-    addExp.addEventListener("click",function(){
-        let exp=document.createElement("div");
-        exp.classList.add(".experience");
-        exp.innerHTML=` <div class="experience">
+          document.querySelector(".all-skills").appendChild(skill);
+        });
+
+        let addExp = document.querySelector(".exp-plus");
+        addExp.addEventListener("click", function () {
+          let exp = document.createElement("div");
+          exp.classList.add(".experience");
+          exp.innerHTML = ` <div class="experience">
                 <input type="text" class="education-1" name="name" placeholder="Heading..">
                 <div class="exp-date">
                     <label for="start-date" id="date-ip">Start date </label>
@@ -181,7 +205,8 @@
               </div>
           </div>`;
           document.querySelector(".exp-container").appendChild(exp);
-    });   
-</script>
+        });
+      </script>
 </body>
+
 </html>
