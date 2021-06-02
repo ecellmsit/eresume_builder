@@ -56,7 +56,7 @@ input[type=submit]:hover {
     margin-bottom: 4%;
 }
 
-#name,.education-1,.skill-name{
+#name,#bio,.education-1,.skill-name{
     width: 60%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -146,7 +146,7 @@ input[type=date]{
     height: 100%;
 }
 
-.achievement-1{
+.achievement-name-1,.achievement-name-2,.achievement-name-3{
     width: 120%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -204,4 +204,21 @@ input:-webkit-autofill:focus{
  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
+.experience-duration,.experience-heading{
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    resize: vertical;
+    outline: none;
+    background-color: white;  
+}
 
+.security-code{
+    display: flex;
+}
+
+.mandatory{
+    margin-bottom: 5%;
+}
