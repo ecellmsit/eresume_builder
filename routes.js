@@ -100,7 +100,7 @@ router.get("/downloaderesume", express.json(), (req, res) => {
               zip(__dirname + "/" + token, __dirname + "/zip/" + token + ".zip")
                 .then(() => {
                   setTimeout(() => {
-                    fs.rmdirSync(__dirname + "/" + token);
+                    fs.rmdirSync(__dirname + "/" + token, { recursive: true });
                     fs.rmSync(__dirname + "/zip/" + token + ".zip");
                   }, TIMEOUT);
 
