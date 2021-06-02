@@ -74,51 +74,60 @@ router.get("/downloaderesume", express.json(), (req, res) => {
       console.error(err);
     } else {
       console.log("success!");
+      try {
+        // Move the image from images directory to eresume directory.
+        fs.rename(
+          `images/${token}`,
+          __dirname + "/" + token + "/images/logo.jpg",
+          function (err) {
+            if (err) {
+              console.error(err);
+              return res.status(500).send("Unable to set img");
+            }
+            try {
+              var html = homeGenerator(
+                name,
+                bio,
+                education,
+                skills,
+                experience,
+                achievements,
+                contact
+              );
+              fs.writeFileSync(__dirname + "/" + token + "/index.html", html);
 
-      // Move the image from images directory to eresume directory.
-      fs.rename(
-        `images/${token}`,
-        __dirname + "/" + token + "/images/logo.jpg",
-        function (err) {
-          if (err) {
-            console.error(err);
-            return res.status(500).send("Unable to set img");
-          }
-          try {
-            var html = homeGenerator(
-              name,
-              bio,
-              education,
-              skills,
-              experience,
-              achievements,
-              contact
-            );
-            fs.writeFileSync(__dirname + "/" + token + "/index.html", html);
+              zip(__dirname + "/" + token, __dirname + "/zip/" + token + ".zip")
+                .then(() => {
+                  setTimeout(() => {
+                    fs.unlinkSync(__dirname + "/" + token);
+                    fs.unlinkSync(__dirname + "/zip/" + token + ".zip");
+                  }, TIMEOUT);
 
-            zip(__dirname + "/" + token, __dirname + "/zip/" + token + ".zip")
-              .then(() => {
-                setTimeout(() => {
-                  fs.unlinkSync(__dirname + "/" + token);
-                  fs.unlinkSync(__dirname + "/zip/" + token + ".zip");
-                }, TIMEOUT);
-
-                res.json({
-                  status: 200,
-                  message: "success!",
-                  url: "http://" + req.headers["host"] + "/" + token + ".zip",
+                  res.json({
+                    status: 200,
+                    message: "success!",
+                    url:
+                      "http://" +
+                      req.headers["host"] +
+                      "/zip/" +
+                      token +
+                      ".zip",
+                  });
+                })
+                .catch((e) => {
+                  console.error(e);
+                  return res.status(500).send("Unable to compress files.");
                 });
-              })
-              .catch((e) => {
-                console.error(e);
-                return res.status(500).send("Unable to compress files.");
-              });
-          } catch (e) {
-            console.error(e);
-            return res.status(500).send("Unable to create html file.");
+            } catch (e) {
+              console.error(e);
+              return res.status(500).send("Unable to create html file.");
+            }
           }
-        }
-      );
+        );
+      } catch (e) {
+        console.error(e);
+        return res.status(500).send("unable to rename image.");
+      }
     }
   });
 });
