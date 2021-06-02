@@ -80,7 +80,8 @@ function homeGenerator(
             </div>
             <div class="timeline">`;
   education.forEach((i) => {
-    html += `
+    if (i["name"] != "")
+      html += `
                         <div class="container left">
                         <div class="content">
                             <h2>${i["name"]}</h2>
@@ -240,7 +241,8 @@ function homeGenerator(
             `;
 
   achievements.forEach((i) => {
-    html += `
+    if (i["name"] != "")
+      html += `
                         <div class="achievement-card">
                             <h2>${i["name"]}</h2>
                             <h5>${i["date"]}</h5>

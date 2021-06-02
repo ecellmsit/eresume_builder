@@ -41,7 +41,7 @@ router.post("/getstarted", upload.single("profilePhoto"), (req, res) => {
   });
 });
 
-router.get("/downloaderesume", express.json(), (req, res) => {
+router.post("/downloaderesume", express.json(), (req, res) => {
   const {
     name,
     bio,
