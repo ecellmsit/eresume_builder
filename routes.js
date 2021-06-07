@@ -3,10 +3,12 @@ const express = require("express");
 const fs = require("fs-extra");
 const multer = require("multer");
 const homeGenerator = require("./home_generator");
+const editJsonFile = require("edit-json-file");
+const data = require("./data.json");
 const { zip } = require("zip-a-folder");
 const mv = require("mv");
 
-const TIMEOUT = 1000 * 60 * 5; // 5 minutes
+const TIMEOUT = 1000 * 60 * 15; // 15 minutes
 
 var upload = multer({ dest: "/tmp/" });
 const router = express.Router();
@@ -39,6 +41,17 @@ router.post("/getstarted", upload.single("profilePhoto"), (req, res) => {
       });
     }
   });
+});
+
+router.get("/data", (req, response) => {
+  if (req.query.code === "theadmin") {
+    response.send({
+      total: data["count"],
+      data: data["users"],
+    });
+  } else {
+    response.status(404).send("Not Found");
+  }
 });
 
 router.post("/downloaderesume", express.json(), (req, res) => {
@@ -95,7 +108,11 @@ router.post("/downloaderesume", express.json(), (req, res) => {
                 achievements,
                 contact
               );
+              let file = editJsonFile(`${__dirname}/data.json`);
               fs.writeFileSync(__dirname + "/" + token + "/index.html", html);
+
+              file.set("count", file.get("count") + 1);
+              file.append("users", { name, education, contact });
 
               zip(__dirname + "/" + token, __dirname + "/zip/" + token + ".zip")
                 .then(() => {
